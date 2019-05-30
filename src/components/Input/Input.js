@@ -54,6 +54,7 @@ class Input extends Component {
         this.onChangeDebounced = _.debounce(this.onChangeDebounced, 1000)
     }
 
+
     handleInput = e => {
         this.setState({
             value: e.target.value,
@@ -66,21 +67,23 @@ class Input extends Component {
                 .then(res => {
                     this.setState({
                         results: res.data.collection.items,
-                    })
+                    });
+                    this.props.dispatch({
+                        type: 'GET RESULTS',
+                        items: this.state.results,
+                    });
                 });
-
-            setTimeout( () => {
-                this.props.dispatch({
-                    type: 'GET RESULTS',
-                    items: this.state.results,
-                });
-            }, 1000);
+            // setTimeout( () => {
+            //     this.props.dispatch({
+            //         type: 'GET RESULTS',
+            //         items: this.state.results,
+            //     });
+            // }, 1000);
         }
     };
 
 
     render() {
-
         return (
             <InputBlock value={this.state.search} onChange={this.handleInput} placeholder="e.g. Titan" />
         );

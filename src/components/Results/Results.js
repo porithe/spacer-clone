@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
+
+
 class Results extends Component {
 
 
@@ -9,7 +11,7 @@ class Results extends Component {
 
         return (
             <div>
-                { this.props.results.map(item => <img src={item.links[0].href} /> )}
+                { this.props.results.map(item => <img key={item.data[0].nasa_id} src={item.links[0].href} /> )}
             </div>
         );
     }
