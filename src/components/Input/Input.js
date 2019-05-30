@@ -69,10 +69,12 @@ class Input extends Component {
                     })
                 });
 
-            this.props.dispatch({
-                type: 'GET RESULTS',
-                items: this.state.results,
-            });
+            setTimeout( () => {
+                this.props.dispatch({
+                    type: 'GET RESULTS',
+                    items: this.state.results,
+                });
+            }, 1000);
         }
     };
 

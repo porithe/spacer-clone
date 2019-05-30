@@ -2,24 +2,14 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 class Results extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            items: [],
-        };
-    }
-
 
 
     render() {
 
 
-        console.log(this.props.results);
-
         return (
             <div>
-                <h1>bez kappi</h1>
+                { this.props.results.map(item => <img src={item.links[0].href} /> )}
             </div>
         );
     }
