@@ -11,7 +11,7 @@ const InputBlock = styled.input`
     height: 45px;
     color: ${props => props.theme.main};
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid ${props => props.theme.main};

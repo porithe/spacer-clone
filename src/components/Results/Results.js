@@ -6,7 +6,7 @@ import Input from '../Input/Input';
 
 const ResultsBlock = styled.div`
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background-color: ${colors.grey};
     position: absolute;
     top: 0;
@@ -18,16 +18,55 @@ const ResultsBlock = styled.div`
 `;
 const ImagesBlock = styled.div`
     padding-top: 25px;
+    padding-bottom: 25px;
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 250px;
     grid-gap: 15px;
     justify-content: center;
+    @media (min-width: 430px) and (max-width: 670px) {
+        grid-template-columns: 300px;
+    }
+    @media (min-width: 671px) and (max-width: 767px) {
+        grid-template-columns: 300px 300px;
+  
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        grid-template-columns: 350px 350px;
+        grid-gap: 25px;
+    }
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        grid-template-columns: 290px 290px 290px;
+        grid-gap: 25px;
+  
+    }
+    @media (min-width: 1281px) {
+        grid-template-columns: 290px 290px 290px 290px;
+        grid-gap: 25px;
+    }
 `;
 const Image = styled.img`
     width: 250px;
     height: 250px;
+    cursor: pointer;
+    @media (min-width: 430px) and (max-width: 767px) {
+        width: 300px;
+        height: 300px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        width: 350px;
+        height: 350px;
+  
+    }
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        width: 290px;
+        height: 290px;
+    }
+    @media (min-width: 1281px) {
+        width: 290px;
+        height: 290px;
+    }
 `;
 
 class Results extends Component {
