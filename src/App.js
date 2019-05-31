@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 
 const defaultState = {
     results: [],
+    loading: false,
 };
 
 function reducer(state = defaultState, action) {
@@ -15,6 +16,7 @@ function reducer(state = defaultState, action) {
         case 'GET RESULTS':
             return {
                 results: action.items,
+                loading: action.loading,
             };
         default: {
             return state;

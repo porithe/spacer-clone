@@ -5,18 +5,19 @@ import _ from 'lodash';
 import { connect } from 'react-redux';
 import axios from 'axios';
 
+
 const InputBlock = styled.input`
     width: 220px;
     height: 45px;
-    color: ${colors.white};
+    color: ${props => props.theme.main};
     text-align: center;
     font-size: 1.7rem;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid rgba(236,240,241 ,1);
-    padding: 5px;
+    border-bottom: 2px solid ${props => props.theme.main};
+    padding: 5px;    
     ::placeholder {
-        color: rgba(236,240,241 ,0.8);
+        color: ${props => props.theme.mainPlaceHolder};
     }
     margin-top: 40px;
     @media (min-width: 481px) and (max-width: 767px) {
@@ -41,6 +42,11 @@ const InputBlock = styled.input`
     }
 `;
 
+const theme = {
+    main: "#FAFAFA",
+    mainPlaceHolder: 'rgba(236,240,241 ,0.8)',
+};
+
 
 class Input extends Component {
 
@@ -50,6 +56,7 @@ class Input extends Component {
         this.state = {
             value: '',
             results: [],
+            loading: false,
         };
         this.onChangeDebounced = _.debounce(this.onChangeDebounced, 1000)
     }
@@ -67,32 +74,29 @@ class Input extends Component {
                 .then(res => {
                     this.setState({
                         results: res.data.collection.items,
+                        loading: true,
                     });
                     this.props.dispatch({
                         type: 'GET RESULTS',
                         items: this.state.results,
+                        loading: this.state.loading,
                     });
                 });
-            // setTimeout( () => {
-            //     this.props.dispatch({
-            //         type: 'GET RESULTS',
-            //         items: this.state.results,
-            //     });
-            // }, 1000);
         }
+        theme.main = colors.dark;
+        theme.mainPlaceHolder = colors.darkPlaceHolder;
     };
+
 
 
     render() {
         return (
-            <InputBlock value={this.state.search} onChange={this.handleInput} placeholder="e.g. Titan" />
+            <InputBlock theme={theme} value={this.state.search} onChange={this.handleInput} placeholder="e.g. Titan" />
         );
     }
 }
 function mapStateToProps(state){
-    return {
-        apiValue: state.apiValue,
-    }
+    return state;
 }
 
 export default connect(mapStateToProps)(Input);
