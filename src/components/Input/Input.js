@@ -15,11 +15,15 @@ const InputBlock = styled.input`
     background-color: transparent;
     border: none;
     border-bottom: 2px solid ${props => props.theme.main};
-    padding: 5px;    
+    padding: 5px;
+    margin-top: ${props => props.theme.defaultMargin};
     ::placeholder {
         color: ${props => props.theme.mainPlaceHolder};
     }
-    margin-top: 40px;
+    @media (min-width: 481px) {
+        margin-top: ${props => props.theme.defaultMarginQuery}
+    
+    }
     @media (min-width: 481px) and (max-width: 767px) {
         width: 250px;
         height: 50px;
@@ -45,6 +49,8 @@ const InputBlock = styled.input`
 const theme = {
     main: "#FAFAFA",
     mainPlaceHolder: 'rgba(236,240,241 ,0.8)',
+    defaultMargin: '40px',
+    defaultMarginQuery: '40px',
 };
 
 
@@ -85,6 +91,8 @@ class Input extends Component {
         }
         theme.main = colors.dark;
         theme.mainPlaceHolder = colors.darkPlaceHolder;
+        theme.defaultMargin = '60px';
+        theme.defaultMarginQuery = '80px';
     };
 
 

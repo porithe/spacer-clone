@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import { colors } from '../../template/colors';
-import bacgroundImage from '../../photos/bgimage.jpg';
+import backgroundImage from '../../photos/bgimage.jpg';
 import Input from '../Input/Input';
 
 const HeaderBlock = styled.header`
     width: 100%;
     height: 100vh;
-    background-image: url('${bacgroundImage}');
+    background-image: url('${backgroundImage}');
     background-size: cover;
     background-position: 80% 50%;
     background-repeat: no-repeat;

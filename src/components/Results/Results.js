@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { colors } from '../../template/colors';
 import Input from '../Input/Input';
+import ChoosenImage from '../ChoosenImage/ChoosenImage';
 
 const ResultsBlock = styled.div`
     width: 100%;
@@ -68,8 +69,22 @@ const Image = styled.img`
         height: 290px;
     }
 `;
+const LogoType = styled.h1`
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: ${colors.dark};
+    font-size: 2.4rem;
+    font-weight: 700;
+    @media (min-width: 481px) {
+        font-size: 3.5rem;
+    }
+`;
+
 
 class Results extends Component {
+
 
 
     render() {
@@ -77,10 +92,13 @@ class Results extends Component {
         if(this.props.loading === true) {
             return (
                 <ResultsBlock>
+                    <LogoType>SPACER</LogoType>
                     <Input />
+
                     <ImagesBlock>
                         { this.props.results.map(item => <Image key={item.data[0].nasa_id} src={item.links[0].href} /> )}
                     </ImagesBlock>
+                    <ChoosenImage />
                 </ResultsBlock>
             );
         }
