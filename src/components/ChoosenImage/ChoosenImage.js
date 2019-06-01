@@ -79,10 +79,14 @@ class ChoosenImage extends Component {
 
 
 
+    closeImage = () => {
+        this.props.closeImage(false);
+    };
+
     render() {
         return (
             <ChoosenBlock>
-                <ExitButton />
+                <ExitButton onClick={this.closeImage} />
                 <Title>Nearside of the Moon</Title>
                 <Image src={"https://images-assets.nasa.gov/image/PIA13998/PIA13998~thumb.jpg"} />
                 <Id>PIA13998</Id>
@@ -96,9 +100,7 @@ class ChoosenImage extends Component {
 }
 
 function mapStateToProps(state){
-    return {
-        showImage: state.showImage,
-    }
+    return state;
 }
 
 export default connect(mapStateToProps)(ChoosenImage);

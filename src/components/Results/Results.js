@@ -85,9 +85,30 @@ const LogoType = styled.h1`
 
 class Results extends Component {
 
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            show: false,
+        };
+    }
+
+
+    showImage = () => {
+        this.setState({
+            show: true,
+        });
+    };
+
+    getValue = (value) => {
+        this.setState({
+            show: value,
+        });
+    };
 
     render() {
+
+
 
         if(this.props.loading === true) {
             return (
@@ -96,9 +117,9 @@ class Results extends Component {
                     <Input />
 
                     <ImagesBlock>
-                        { this.props.results.map(item => <Image key={item.data[0].nasa_id} src={item.links[0].href} /> )}
+                        { this.props.results.map(item => <Image onClick={this.showImage} key={item.data[0].nasa_id} src={item.links[0].href} /> )}
                     </ImagesBlock>
-                    <ChoosenImage />
+                    { this.state.show === true ? <ChoosenImage closeImage={this.getValue} /> : null }
                 </ResultsBlock>
             );
         }
