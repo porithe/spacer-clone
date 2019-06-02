@@ -99,7 +99,7 @@ class Input extends Component {
 
     render() {
         return (
-            <InputBlock theme={theme} value={this.state.search} onChange={this.handleInput} placeholder="e.g. Titan" />
+            <InputBlock theme={theme} value={this.state.search} onChange={this.handleInput} placeholder="e.g. Star" />
         );
     }
 }

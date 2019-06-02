@@ -94,10 +94,11 @@ class Results extends Component {
     }
 
 
-    showImage = () => {
+    showImage = (value) => {
         this.setState({
             show: true,
         });
+        this.imageData = value;
     };
 
     getValue = (value) => {
@@ -105,6 +106,8 @@ class Results extends Component {
             show: value,
         });
     };
+
+    imageData = null;
 
     render() {
 
@@ -117,9 +120,9 @@ class Results extends Component {
                     <Input />
 
                     <ImagesBlock>
-                        { this.props.results.map(item => <Image onClick={this.showImage} key={item.data[0].nasa_id} src={item.links[0].href} /> )}
+                        { this.props.results.map(item => <Image onClick={() => this.showImage(item)} key={item.data[0].nasa_id} src={item.links[0].href} /> )}
                     </ImagesBlock>
-                    { this.state.show === true ? <ChoosenImage closeImage={this.getValue} /> : null }
+                    { this.state.show === true ? <ChoosenImage closeImage={this.getValue} value={this.imageData} /> : null }
                 </ResultsBlock>
             );
         }
