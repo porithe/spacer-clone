@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b1be34f-c572-4132-91f9-b482fdee206a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/ChoosenImage/ChoosenImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChoosenImage/ChoosenImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Input/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/Input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Results/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results/Results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Input/Input.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="932">
-              <caret line="101" column="118" lean-forward="true" selection-start-line="101" selection-start-column="118" selection-end-line="101" selection-end-column="118" />
+            <state relative-caret-position="700">
+              <caret line="105" column="32" lean-forward="true" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -161,7 +158,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/deploy/portfolio" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -197,18 +194,17 @@
       <workItem from="1559225482753" duration="4289000" />
       <workItem from="1559295838828" duration="80000" />
       <workItem from="1559295943663" duration="12105000" />
-      <workItem from="1559385486366" duration="15086000" />
+      <workItem from="1559385486366" duration="16041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45414000" />
+    <option name="totallyTimeSpent" value="46369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="34" width="1252" height="1406" extended-state="4" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -222,7 +218,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2414307" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2414307" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -327,8 +323,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Input/Input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="932">
-          <caret line="101" column="118" lean-forward="true" selection-start-line="101" selection-start-column="118" selection-end-line="101" selection-end-column="118" />
+        <state relative-caret-position="700">
+          <caret line="105" column="32" lean-forward="true" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
